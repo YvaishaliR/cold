@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/YvaishaliR/cold.git'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'python3 -m unittest discover tests'
+            }
+        }
+
+        stage('Package') {
+            steps {
+                sh 'zip -r cold.zip cold'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'All tests passed and package built successfully!'
+        }
+        failure {
+            echo 'Something went wrong during the pipeline!'
+        }
+    }
+}
