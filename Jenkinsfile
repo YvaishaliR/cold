@@ -14,12 +14,6 @@ pipeline {
                 bat 'python -m unittest discover tests'
             }
         }
-
-        stage('Package') {
-            steps {
-                bat 'zip -r cold.zip cold'
-            }
-        }
     }
 
     post {
