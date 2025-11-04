@@ -11,13 +11,13 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'python3 -m unittest discover tests'
+                bat 'python3 -m unittest discover tests'
             }
         }
 
         stage('Package') {
             steps {
-                sh 'zip -r cold.zip cold'
+                bat 'zip -r cold.zip cold'
             }
         }
     }
