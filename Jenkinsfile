@@ -18,7 +18,7 @@ pipeline {
 
     post {
         success {
-            echo 'All tests passed and package built successfully!'
+            echo 'All tests passed and package built successfully!Yayyyyyyyyyy'
         }
         failure {
             echo 'Something went wrong during the pipeline!'
