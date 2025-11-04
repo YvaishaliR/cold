@@ -11,7 +11,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                bat 'python3 -m unittest discover tests'
+                bat 'python -m unittest discover tests'
             }
         }
 
