@@ -11,14 +11,14 @@ pipeline {
 
         stage('Test') {
             steps {
-                bat 'python -m unittest discover tests'
+                sh 'python -m unittest discover tests'
             }
         }
     }
 
     post {
         success {
-            echo 'All tests passed and package built successfully!Yayyyyyyyyyy'
+            echo 'All tests passed and package built successfully!Yayyyyyyyyyy! From ec2'
         }
         failure {
             echo 'Something went wrong during the pipeline!'
