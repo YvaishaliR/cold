@@ -21,7 +21,7 @@ pipeline {
             echo 'All tests passed and package built successfully!Yayyyyyyyyyy'
         }
         failure {
-            echo 'Something went wrong during the pipeline!'
+            echo 'Something went wrong during the pipeline! :('
         }
     }
 }
