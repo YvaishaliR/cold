@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/YvaishaliR/cold.git'
+               echo 'git branch: 'main', url: 'https://github.com/YvaishaliR/cold.git' '
             }
         }
 
