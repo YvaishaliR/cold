@@ -12,7 +12,7 @@ pipeline {
 
     post {
         success {
-            echo 'All tests passed and package built successfully!Yayyyyyyyyyy! From ec2!Added webhook :)'
+            echo 'All tests passed and package built successfully!Meow!'
         }
         failure {
             echo 'Something went wrong during the pipeline!'
