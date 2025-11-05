@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-               echo 'git branch: 'main', url: 'github.com/YvaishaliR/cold.git' '
-            }
-        }
-
         stage('Test') {
             steps {
                 sh 'python3 -m unittest discover tests'
